@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mainfeed.MainFeedFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <TextView
+            android:id="@+id/logoutBtn"
+            android:layout_width="103dp"
+            android:layout_height="48dp"
+            android:layout_margin="@dimen/text_margin"
+            android:layout_marginBottom="24dp"
+            android:background="@color/brand_color"
+            android:padding="@dimen/text_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03"
+            tools:text="@string/logout_button_text" />
+
+        <TextView
+            android:id="@+id/main_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/travel_stories"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_feed"
+            app:layout_constraintVertical_bias="0.224"
+            tools:listitem="@layout/display_view" />
+
+        <ImageView
+            android:id="@+id/main_profile_icon"
+            android:layout_width="43dp"
+            android:layout_height="47dp"
+            android:contentDescription="@string/profile_navigation"
+            android:src="@drawable/profile_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.915"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.042" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.beta.login.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_mainFeedFragment"
+            app:destination="@id/mainFeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.beta.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFeedFragment"
+            app:destination="@id/mainFeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFeedFragment"
+        android:name="com.example.beta.mainfeed.MainFeedFragment"
+        android:label="fragment_main_feed"
+        tools:layout="@layout/fragment_main_feed" >
+        <action
+            android:id="@+id/action_mainFeedFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFeedFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.beta.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_mainFeedFragment"
+            app:destination="@id/mainFeedFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_albumFragment"
+            app:destination="@id/albumFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.beta.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.example.beta.profile.AlbumFragment"
+        android:label="AlbumFragment" >
+        <action
+            android:id="@+id/action_albumFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>
